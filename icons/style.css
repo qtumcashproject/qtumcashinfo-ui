@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'bcschain-icons';
-  src: url('fonts/bcschain-icons.eot?vyas3r');
-  src: url('fonts/bcschain-icons.eot?vyas3r#iefix') format('embedded-opentype'),
-    url('fonts/bcschain-icons.ttf?vyas3r') format('truetype'),
-    url('fonts/bcschain-icons.woff?vyas3r') format('woff'),
-    url('fonts/bcschain-icons.svg?vyas3r#bcs-icons') format('svg');
+  font-family: 'qtumcash-icons';
+  src: url('fonts/qtumcash-icons.eot?vyas3r');
+  src: url('fonts/qtumcash-icons.eot?vyas3r#iefix') format('embedded-opentype'),
+    url('fonts/qtumcash-icons.ttf?vyas3r') format('truetype'),
+    url('fonts/qtumcash-icons.woff?vyas3r') format('woff'),
+    url('fonts/qtumcash-icons.svg?vyas3r#qtumcash-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.bcs-icon {
-  font-family: 'bcschain-icons' !important;
+.qtumcash-icon {
+  font-family: 'qtumcash-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -21,14 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.bcs-icon--bcs:before {
+.qtumcash-icon--qtumcash:before {
   content: "\e901";
 }
-.bcs-icon--bcschain:before {
+.qtumcash-icon--qtumcash:before {
   content: "\e900";
   display: inline-block;
   transform: rotateX(180deg);
 }
-.bcs-icon--forum:before {
+.qtumcash-icon--forum:before {
   content: "\e902";
 }

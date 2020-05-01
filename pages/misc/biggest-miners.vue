@@ -19,7 +19,7 @@
           </td>
           <td>{{ blocks }}</td>
           <td class="monospace">{{ (blocks / posBlocks * 100).toFixed(4) + '%' }}</td>
-          <td class="monospace is-hidden-touch">{{ balance | bcs(8) }}</td>
+          <td class="monospace is-hidden-touch">{{ balance | qtumcash(8) }}</td>
         </tr>
       </tbody>
     </table>
@@ -29,7 +29,7 @@
 
 <script>
   import Misc from '@/models/misc'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
   import {scrollIntoView} from '@/utils/dom'
 
   export default {

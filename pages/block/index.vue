@@ -3,7 +3,7 @@
     <form action="/block" method="GET" @submit.prevent="submit">
       <div class="control">
         <input type="date" class="input" name="date" v-model="date">
-        <button type="submit" class="button is-bcs">{{ $t('action.go') }}</button>
+        <button type="submit" class="button is-qtumcash">{{ $t('action.go') }}</button>
       </div>
     </form>
     <table class="table is-fullwidth is-bordered is-striped">
@@ -23,7 +23,7 @@
             <BlockLink :block="height" :clipboard="false" />
           </td>
           <td>{{ timestamp | timestamp() }}</td>
-          <td class="is-hidden-touch monospace">{{ reward | bcs(8) }} BCS</td>
+          <td class="is-hidden-touch monospace">{{ reward | qtumcash(8) }} QTH</td>
           <td class="is-hidden-touch">
             <AddressLink :address="miner" />
           </td>
@@ -35,7 +35,7 @@
     <form action="/block" method="GET" @submit.prevent="submit">
       <div class="control">
         <input type="date" class="input" name="date" v-model="date">
-        <button type="submit" class="button is-bcs">{{ $t('action.go') }}</button>
+        <button type="submit" class="button is-qtumcash">{{ $t('action.go') }}</button>
       </div>
     </form>
   </section>
@@ -43,7 +43,7 @@
 
 <script>
   import Block from '@/models/block'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
   import {scrollIntoView} from '@/utils/dom'
 
   function formatUTCTimestamp(date) {

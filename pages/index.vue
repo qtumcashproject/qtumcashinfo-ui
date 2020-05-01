@@ -22,11 +22,11 @@
             </p>
             <p class="information">
               <span class="key">{{ $t('blockchain.network_weight') }}</span>:
-              <span class="value">{{ stakeWeight | bcs(8) }}</span>
+              <span class="value">{{ stakeWeight | qtumcash(8) }}</span>
             </p>
             <p class="information">
               <span class="key">{{ $t('blockchain.fee_rate') }}</span>:
-              <span class="value">{{ feeRate }} BCS/kB</span>
+              <span class="value">{{ feeRate }} QTH/kB</span>
             </p>
           </div>
         </div>
@@ -43,16 +43,16 @@
             <h3 class="card-header-title">
               {{ $tc('blockchain.block', 2) }}
             </h3>
-            <nuxt-link to="/block" class="card-header-button button is-bcs is-outlined">
+            <nuxt-link to="/block" class="card-header-button button is-qtumcash is-outlined">
               {{ $t('action.view_all') }}
             </nuxt-link>
           </div>
           <div class="card-body">
-            <div v-for="block in recentBlocks" class="bcs-block is-size-7" :key="block.hash">
+            <div v-for="block in recentBlocks" class="qtumcash-block is-size-7" :key="block.hash">
               <div class="level">
                 <div class="level-left">
                   <nuxt-link :to="{name: 'block-id', params: {id: block.height}}"
-                    class="level-item bcs-block-box has-text-centered">
+                    class="level-item qtumcash-block-box has-text-centered">
                     {{ $tc('blockchain.block', 1) }} #{{ block.height }}
                     <FromNow :timestamp="block.timestamp" />
                   </nuxt-link>
@@ -65,7 +65,7 @@
 {{ block.transactionCount }} {{ $tc('block.brief.transaction', block.transactionCount) }} {{ $t('block.brief.in') }} {{ block.interval }} {{ $tc('block.brief.seconds', block.interval) }}
                       <br>
                       <span class="monospace">
-                        {{ $t('block.brief.reward') }} {{ block.reward | bcs }} BCS
+                        {{ $t('block.brief.reward') }} {{ block.reward | qtumcash }} QTH
                       </span>
                     </div>
                   </div>
@@ -90,7 +90,7 @@
             <div v-for="transaction in recentTransactions" :key="transaction.id" class="is-size-7 transaction">
               <div class="level">
                 <TransactionLink :transaction="transaction.id" class="level-left" />
-                <span class="level-right">{{ transaction.outputValue | bcs }} BCS</span>
+                <span class="level-right">{{ transaction.outputValue | qtumcash }} QTH</span>
               </div>
             </div>
           </div>
@@ -104,12 +104,12 @@
   import Block from "@/models/block"
   import Transaction from "@/models/transaction"
   import Misc from '@/models/misc'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
 
   export default {
     head() {
       return {
-        title: 'BCSChain Explorer',
+        title: 'QtumCash Explorer',
         titleTemplate: null,
 		meta: [
 			{ name: 'description', content: this.$t('descriptions.index')}
@@ -205,7 +205,7 @@
     margin: 0;
   }
 
-  .bcs-block {
+  .qtumcash-block {
     padding: 1em;
     border-top: 1px solid #bb9f89;
     &:first-child {
@@ -213,14 +213,14 @@
     }
   }
 
-  .bcs-block-box {
+  .qtumcash-block-box {
     flex-direction: column;
     min-width: 11em;
     padding: 1em;
     background-color: #bb9f89;
     color: inherit;
     &:hover {
-      outline: 1px solid @bcs;
+      outline: 1px solid @qtumcash;
     }
   }
 

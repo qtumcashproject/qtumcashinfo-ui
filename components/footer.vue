@@ -16,28 +16,28 @@
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://cryptorussia.net/clubs/4-bcschain/">
-            <span class="bcs-icon bcs-icon--forum"></span> {{ $t('footer.forum') }}
+          <a target="_blank" href="https://cryptorussia.net/clubs/4-qtumcash/">
+            <span class="qtumcash-icon qtumcash-icon--forum"></span> {{ $t('footer.forum') }}
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://github.com/Blockchain-Solutions-BCS/bcschain-core">
+          <a target="_blank" href="https://github.com/Blockchain-Solutions-QTH/qtumcash-core">
             <Icon icon="github" brands /> Github
           </a>
         </li>
 		<li>
-          <a target="_blank" href="https://bcschain.org/">
-            <span class="bcs-icon bcs-icon--bcschain"></span> BCSChain
+          <a target="_blank" href="https://qtumcash.org/">
+            <span class="qtumcash-icon qtumcash-icon--qtumcash"></span> QtumCash
           </a>
         </li>
 		<li>
           <a target="_blank" href="https://bs.world/">
-            <span class="bcs-icon bcs-icon--bcs"></span> BCS
+            <span class="qtumcash-icon qtumcash-icon--qtumcash"></span> QTH
           </a>
         </li>
       </ul>
       <div class="copyright">
-        2020 BCS CHAIN FOUNDATION &copy; {{ $t('footer.rights_reserved') }}
+        2020 QTH CHAIN FOUNDATION &copy; {{ $t('footer.rights_reserved') }}
       </div>
     </div>
   </footer>
@@ -84,7 +84,7 @@
       margin-bottom: 2.5rem;
     }
   }
-  span.fab, span.fas, span.bcs-icon {
+  span.fab, span.fas, span.qtumcash-icon {
     font-size: 2em;
     vertical-align: middle;
   }

@@ -1,4 +1,4 @@
-import * as QtuminfoAPI from '@/services/bcsinfo-api'
+import * as QtuminfoAPI from '@/services/qtumcashinfo-api'
 
 class Transaction {
   static get(id, options = {}) {

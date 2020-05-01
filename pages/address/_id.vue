@@ -33,16 +33,16 @@
         <div class="columns">
           <div class="column info-title">{{ $t('address.balance') }}</div>
           <div class="column info-value monospace">
-            {{ balance | bcs }} BCS
+            {{ balance | qtumcash }} QTH
             <span v-if="unconfirmed !== '0' && staking !== '0'">
-              ({{ unconfirmed | bcs }} BCS {{ $t('address.unconfirmed') }},
-              {{ staking | bcs }} BCS {{ $t('address.staking') }})
+              ({{ unconfirmed | qtumcash }} QTH {{ $t('address.unconfirmed') }},
+              {{ staking | qtumcash }} QTH {{ $t('address.staking') }})
             </span>
             <span v-else-if="unconfirmed !== '0'">
-              ({{ unconfirmed | bcs }} BCS {{ $t('address.unconfirmed') }})
+              ({{ unconfirmed | qtumcash }} QTH {{ $t('address.unconfirmed') }})
             </span>
             <span v-else-if="staking !== '0'">
-              ({{ staking | bcs }} BCS {{ $t('address.staking') }})
+              ({{ staking | qtumcash }} QTH {{ $t('address.staking') }})
             </span>
           </div>
         </div>
@@ -52,11 +52,11 @@
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('address.total_received') }}</div>
-          <div class="column info-value monospace">{{ totalReceived | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ totalReceived | qtumcash }} QTH</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('address.total_sent') }}</div>
-          <div class="column info-value monospace">{{ totalSent | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ totalSent | qtumcash }} QTH</div>
         </div>
         <div class="columns" v-if="existingTokenBalances.length">
           <div class="column info-title">{{ $t('address.token_balances') }}</div>
@@ -109,7 +109,7 @@
   import Vue from 'vue'
   import Address from '@/models/address'
   import Transaction from '@/models/transaction'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
   import {extendAddress} from '@/utils/address'
   import {scrollIntoView} from '@/utils/dom'
 

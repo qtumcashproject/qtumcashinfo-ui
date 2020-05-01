@@ -32,13 +32,13 @@ export default {
         use: 'yaml-loader'
       })
       config.plugins.push(new webpack.DefinePlugin({
-        'process.env.bcsinfoAPIBase': JSON.stringify(process.env.BCSINFO_API_BASE
-          || process.env[isServer ? 'BCSINFO_API_BASE_SERVER' : 'BCSINFO_API_BASE_CLIENT']
+        'process.env.qtumcashinfoAPIBase': JSON.stringify(process.env.QTHINFO_API_BASE
+          || process.env[isServer ? 'QTHINFO_API_BASE_SERVER' : 'QTHINFO_API_BASE_CLIENT']
           || 'http://localhost:7001/'),
-        'process.env.bcsinfoWSBase': JSON.stringify(process.env.BCSINFO_WS_BASE
-          || process.env.BCSINFO_API_BASE_WS
+        'process.env.qtumcashinfoWSBase': JSON.stringify(process.env.QTHINFO_WS_BASE
+          || process.env.QTHINFO_API_BASE_WS
           || '//localhost:7001/'),
-        'process.env.network': JSON.stringify(process.env.BCS_NETWORK || 'mainnet')
+        'process.env.network': JSON.stringify(process.env.QTH_NETWORK || 'mainnet')
       }))
     },
 	publicPath: '/dist',
@@ -53,7 +53,7 @@ export default {
   plugins: [
     '~/plugins/components.js',
     '~/plugins/i18n.js',
-    '~/plugins/bcs-utils.js',
+    '~/plugins/qtumcash-utils.js',
     {src: '~/plugins/websocket.js', ssr: false}
   ],
   modules: [

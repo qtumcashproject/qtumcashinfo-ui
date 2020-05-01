@@ -3,7 +3,7 @@
     <div class="field">
       <label>{{ $t('blockchain.network_weight') }}</label>
       <div class="control">
-        <output class="monospace">{{ netStakeWeight | bcs(8) }}</output>
+        <output class="monospace">{{ netStakeWeight | qtumcash(8) }}</output>
       </div>
     </div>
     <div class="field">
@@ -53,7 +53,7 @@
   import {toHexAddress} from '@/utils/address'
   import Address from '@/models/address'
   import Misc from '@/models/misc'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
 
   export default {
     head() {

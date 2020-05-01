@@ -34,7 +34,7 @@
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('block.block_reward') }}</div>
-          <div class="column info-value monospace">{{ reward | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ reward | qtumcash }} QTH</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('block.difficulty') }}</div>
@@ -92,7 +92,7 @@
 <script>
   import Block from '@/models/block'
   import Transaction from '@/models/transaction'
-  import RequestError from '@/services/bcsinfo-api'
+  import RequestError from '@/services/qtumcashinfo-api'
   import {scrollIntoView} from '@/utils/dom'
 
   export default {

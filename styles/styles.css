@@ -5737,7 +5737,7 @@ button.dropdown-item.is-active {
 text-decoration: underline;
 }
 
-.level-left a.bcs-block-box:hover, .level-left a.bcs-block-box:focus {
+.level-left a.qtumcash-block-box:hover, .level-left a.qtumcash-block-box:focus {
 text-decoration: none;
 }
 

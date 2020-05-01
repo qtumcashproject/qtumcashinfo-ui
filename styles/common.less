@@ -8,13 +8,13 @@
   font-family: monospace;
 }
 
-.button.is-bcs {
+.button.is-qtumcash {
   border-color: transparent;
-  background-color: @bcs;
+  background-color: @qtumcash;
   color: white;
 
   &:hover, .is-hovered {
-    background-color: darken(@bcs, 3%);
+    background-color: darken(@qtumcash, 3%);
     color: white;
   }
 
@@ -22,30 +22,30 @@
     outline: none;
     color: white;
     &:not(:active) {
-      box-shadow: 0 0 0 0.125rem fade(@bcs, 25%);
+      box-shadow: 0 0 0 0.125rem fade(@qtumcash, 25%);
     }
   }
 
   &:active, .is-actived {
     outline: none;
-    background-color: darken(@bcs, 5%);
+    background-color: darken(@qtumcash, 5%);
     color: white;
   }
 
   &.is-outlined {
-    border-color: @bcs;
+    border-color: @qtumcash;
     background-color: transparent;
-    color: @bcs;
+    color: @qtumcash;
     &:hover, .is-hovered {
-      border-color: @bcs;
-      background-color: @bcs;
+      border-color: @qtumcash;
+      background-color: @qtumcash;
       color: white;
     }
   }
 
   &.is-inverted {
     background-color: white;
-    color: @bcs;
+    color: @qtumcash;
     &:hover, .is-hovered {
       background-color: #f2f2f2;
       color: white;
@@ -58,13 +58,13 @@
     color: white;
     &:hover {
       background-color: white;
-      color: @bcs;
+      color: @qtumcash;
     }
   }
 
   &[disabled] {
     border-color: transparent;
-    background-color: @bcs;
+    background-color: @qtumcash;
     box-shadow: none;
   }
 }

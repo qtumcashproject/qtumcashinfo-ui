@@ -14,7 +14,7 @@
 
 <script>
   import Misc from '@/models/misc'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
 
   export default {
     head() {

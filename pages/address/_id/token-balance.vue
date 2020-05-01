@@ -98,7 +98,7 @@
   import Vue from 'vue'
   import {Responsive} from '@/plugins/mixins'
   import Address from '@/models/address'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
   import {scrollIntoView} from '@/utils/dom'
 
   export default {

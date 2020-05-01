@@ -46,15 +46,15 @@
         </template>
         <div class="columns">
           <div class="column info-title">{{ $t('contract.balance') }}</div>
-          <div class="column info-value monospace">{{ balance | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ balance | qtumcash }} QTH</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('contract.total_received') }}</div>
-          <div class="column info-value monospace">{{ totalReceived | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ totalReceived | qtumcash }} QTH</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('contract.total_sent') }}</div>
-          <div class="column info-value monospace">{{ totalSent | bcs }} BCS</div>
+          <div class="column info-value monospace">{{ totalSent | qtumcash }} QTH</div>
         </div>
         <div class="columns" v-if="existingTokenBalances.length">
           <div class="column info-title">{{ $t('address.token_balances') }}</div>
@@ -96,7 +96,7 @@
 
 <script>
   import Contract from '@/models/contract'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
 
   export default {
     head() {

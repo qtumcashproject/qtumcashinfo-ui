@@ -28,12 +28,12 @@
             <td>
               <TransactionLink :transaction="id" />
             </td>
-            <td class="monospace">{{ balance | bcs(8) }} BCS</td>
+            <td class="monospace">{{ balance | qtumcash(8) }} QTH</td>
             <td class="monospace">
               <span v-if="amount > 0">+</span>
               <span v-else-if="amount < 0">-</span>
               <span v-else>&nbsp;</span>
-              {{ Math.abs(amount) | bcs(8) }} BCS
+              {{ Math.abs(amount) | qtumcash(8) }} QTH
             </td>
           </tr>
           <template v-else>
@@ -45,12 +45,12 @@
               </td>
             </tr>
             <tr>
-              <td class="monospace">{{ balance | bcs(8) }} BCS</td>
+              <td class="monospace">{{ balance | qtumcash(8) }} QTH</td>
               <td class="monospace">
                 <span v-if="amount > 0">+</span>
                 <span v-else-if="amount < 0">-</span>
                 <span v-else>&nbsp;</span>
-                {{ Math.abs(amount) | bcs(8) }} BCS
+                {{ Math.abs(amount) | qtumcash(8) }} QTH
               </td>
             </tr>
           </template>
@@ -65,7 +65,7 @@
   import Vue from 'vue'
   import {Responsive} from '@/plugins/mixins'
   import Address from '@/models/address'
-  import {RequestError} from '@/services/bcsinfo-api'
+  import {RequestError} from '@/services/qtumcashinfo-api'
   import {scrollIntoView} from '@/utils/dom'
 
   export default {

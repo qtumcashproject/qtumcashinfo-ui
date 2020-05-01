@@ -1,1 +1,1 @@
-# bcsinfo-ui
+# qtumcashinfo-ui
