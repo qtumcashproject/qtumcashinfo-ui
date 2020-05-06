@@ -19,7 +19,7 @@
           </td>
           <td>{{ blocks }}</td>
           <td class="monospace">{{ (blocks / posBlocks * 100).toFixed(4) + '%' }}</td>
-          <td class="monospace is-hidden-touch">{{ balance | qtumcash(8) }}</td>
+          <td class="monospace is-hidden-touch">{{ balance | qth(8) }}</td>
         </tr>
       </tbody>
     </table>

@@ -33,16 +33,16 @@
         <div class="columns">
           <div class="column info-title">{{ $t('address.balance') }}</div>
           <div class="column info-value monospace">
-            {{ balance | qtumcash }} QTH
+            {{ balance | qth }} QTH
             <span v-if="unconfirmed !== '0' && staking !== '0'">
-              ({{ unconfirmed | qtumcash }} QTH {{ $t('address.unconfirmed') }},
-              {{ staking | qtumcash }} QTH {{ $t('address.staking') }})
+              ({{ unconfirmed | qth }} QTH {{ $t('address.unconfirmed') }},
+              {{ staking | qth }} QTH {{ $t('address.staking') }})
             </span>
             <span v-else-if="unconfirmed !== '0'">
-              ({{ unconfirmed | qtumcash }} QTH {{ $t('address.unconfirmed') }})
+              ({{ unconfirmed | qth }} QTH {{ $t('address.unconfirmed') }})
             </span>
             <span v-else-if="staking !== '0'">
-              ({{ staking | qtumcash }} QTH {{ $t('address.staking') }})
+              ({{ staking | qth }} QTH {{ $t('address.staking') }})
             </span>
           </div>
         </div>
@@ -52,11 +52,11 @@
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('address.total_received') }}</div>
-          <div class="column info-value monospace">{{ totalReceived | qtumcash }} QTH</div>
+          <div class="column info-value monospace">{{ totalReceived | qth }} QTH</div>
         </div>
         <div class="columns">
           <div class="column info-title">{{ $t('address.total_sent') }}</div>
-          <div class="column info-value monospace">{{ totalSent | qtumcash }} QTH</div>
+          <div class="column info-value monospace">{{ totalSent | qth }} QTH</div>
         </div>
         <div class="columns" v-if="existingTokenBalances.length">
           <div class="column info-title">{{ $t('address.token_balances') }}</div>

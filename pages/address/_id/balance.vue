@@ -28,12 +28,12 @@
             <td>
               <TransactionLink :transaction="id" />
             </td>
-            <td class="monospace">{{ balance | qtumcash(8) }} QTH</td>
+            <td class="monospace">{{ balance | qth(8) }} QTH</td>
             <td class="monospace">
               <span v-if="amount > 0">+</span>
               <span v-else-if="amount < 0">-</span>
               <span v-else>&nbsp;</span>
-              {{ Math.abs(amount) | qtumcash(8) }} QTH
+              {{ Math.abs(amount) | qth(8) }} QTH
             </td>
           </tr>
           <template v-else>
@@ -45,12 +45,12 @@
               </td>
             </tr>
             <tr>
-              <td class="monospace">{{ balance | qtumcash(8) }} QTH</td>
+              <td class="monospace">{{ balance | qth(8) }} QTH</td>
               <td class="monospace">
                 <span v-if="amount > 0">+</span>
                 <span v-else-if="amount < 0">-</span>
                 <span v-else>&nbsp;</span>
-                {{ Math.abs(amount) | qtumcash(8) }} QTH
+                {{ Math.abs(amount) | qth(8) }} QTH
               </td>
             </tr>
           </template>

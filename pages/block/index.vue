@@ -3,7 +3,7 @@
     <form action="/block" method="GET" @submit.prevent="submit">
       <div class="control">
         <input type="date" class="input" name="date" v-model="date">
-        <button type="submit" class="button is-qtumcash">{{ $t('action.go') }}</button>
+        <button type="submit" class="button is-qrumcash">{{ $t('action.go') }}</button>
       </div>
     </form>
     <table class="table is-fullwidth is-bordered is-striped">
@@ -23,7 +23,7 @@
             <BlockLink :block="height" :clipboard="false" />
           </td>
           <td>{{ timestamp | timestamp() }}</td>
-          <td class="is-hidden-touch monospace">{{ reward | qtumcash(8) }} QTH</td>
+          <td class="is-hidden-touch monospace">{{ reward | qth(8) }} QTH</td>
           <td class="is-hidden-touch">
             <AddressLink :address="miner" />
           </td>

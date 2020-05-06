@@ -3,7 +3,7 @@
     <div class="field">
       <label>{{ $t('blockchain.network_weight') }}</label>
       <div class="control">
-        <output class="monospace">{{ netStakeWeight | qtumcash(8) }}</output>
+        <output class="monospace">{{ netStakeWeight | qth(8) }}</output>
       </div>
     </div>
     <div class="field">
@@ -53,7 +53,7 @@
   import {toHexAddress} from '@/utils/address'
   import Address from '@/models/address'
   import Misc from '@/models/misc'
-  import {RequestError} from '@/services/qtumcashinfo-api'
+  import {RequestError} from '@/services/qtuminfo-api'
 
   export default {
     head() {
@@ -112,9 +112,9 @@
       },
       reward() {
         let height = this.blockchain.height - 5001
-        let interval = 25000
+        let interval = 1000000
         let halvings = Math.floor(height / interval)
-        return halvings === 7 ? 0 : 1e11 >>> halvings
+        return halvings === 64 ? 0 : 17e8 >>> halvings
       }
     },
     watch: {

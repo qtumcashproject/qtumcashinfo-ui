@@ -32,13 +32,13 @@ export default {
         use: 'yaml-loader'
       })
       config.plugins.push(new webpack.DefinePlugin({
-        'process.env.qtumcashinfoAPIBase': JSON.stringify(process.env.QTHINFO_API_BASE
-          || process.env[isServer ? 'QTHINFO_API_BASE_SERVER' : 'QTHINFO_API_BASE_CLIENT']
+        'process.env.qtumcashinfoAPIBase': JSON.stringify(process.env.QTUMCASHINFO_API_BASE
+          || process.env[isServer ? 'QTUMCASHINFO_API_BASE_SERVER' : 'QTUMCASHINFO_API_BASE_CLIENT']
           || 'http://localhost:7001/'),
-        'process.env.qtumcashinfoWSBase': JSON.stringify(process.env.QTHINFO_WS_BASE
-          || process.env.QTHINFO_API_BASE_WS
+        'process.env.qtumcashinfoWSBase': JSON.stringify(process.env.QTUMCASHINFO_WS_BASE
+          || process.env.QTUMCASHINFO_API_BASE_WS
           || '//localhost:7001/'),
-        'process.env.network': JSON.stringify(process.env.QTH_NETWORK || 'mainnet')
+        'process.env.network': JSON.stringify(process.env.QTUMCASH_NETWORK || 'mainnet')
       }))
     },
 	publicPath: '/dist',

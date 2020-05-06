@@ -22,7 +22,7 @@
             </p>
             <p class="information">
               <span class="key">{{ $t('blockchain.network_weight') }}</span>:
-              <span class="value">{{ stakeWeight | qtumcash(8) }}</span>
+              <span class="value">{{ stakeWeight | qth(8) }}</span>
             </p>
             <p class="information">
               <span class="key">{{ $t('blockchain.fee_rate') }}</span>:
@@ -65,7 +65,7 @@
 {{ block.transactionCount }} {{ $tc('block.brief.transaction', block.transactionCount) }} {{ $t('block.brief.in') }} {{ block.interval }} {{ $tc('block.brief.seconds', block.interval) }}
                       <br>
                       <span class="monospace">
-                        {{ $t('block.brief.reward') }} {{ block.reward | qtumcash }} QTH
+                        {{ $t('block.brief.reward') }} {{ block.reward | qth }} QTH
                       </span>
                     </div>
                   </div>
@@ -90,7 +90,7 @@
             <div v-for="transaction in recentTransactions" :key="transaction.id" class="is-size-7 transaction">
               <div class="level">
                 <TransactionLink :transaction="transaction.id" class="level-left" />
-                <span class="level-right">{{ transaction.outputValue | qtumcash }} QTH</span>
+                <span class="level-right">{{ transaction.outputValue | qth }} QTH</span>
               </div>
             </div>
           </div>

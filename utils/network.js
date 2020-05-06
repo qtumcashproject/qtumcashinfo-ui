@@ -10,7 +10,7 @@ export default {
     pubkey: 0x78,
     pubkeyhash: 0x78,
     scripthash: 0x6e,
-    witness_v0_keyhash: 'tq',
-    witness_v0_scripthash: 'tq'
+    witness_v0_keyhash: 'tb',
+    witness_v0_scripthash: 'tb'
   }
 }[process.env.network || 'mainnet']

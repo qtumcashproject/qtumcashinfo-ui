@@ -31,7 +31,7 @@
               <TransactionLink :transaction="input.prevTxId" :clipboard="false">
                 <Icon icon="search" />
               </TransactionLink>
-              {{ input.value | qtumcash(8) }} QTUM
+              {{ input.value | qth(8) }} QTH
             </span>
           </template>
         </div>
@@ -47,7 +47,7 @@
               <TransactionLink :transaction="input.prevTxId" :clipboard="false">
                 <Icon icon="search" />
               </TransactionLink>
-              {{ input.value | qtumcash(8) }} QTUM
+              {{ input.value | qth(8) }} QTH
             </span>
           </template>
           <div class="is-clearfix"></div>
@@ -87,7 +87,7 @@
             <TransactionLink v-if="output.spentTxId" :transaction="output.spentTxId" :clipboard="false">
               <Icon icon="search" />
             </TransactionLink>
-            {{ output.value | qtumcash(8) }} QTUM
+            {{ output.value | qth(8) }} QTH
           </span>
           <span class="is-pulled-right" v-else-if="contractInfo[index]">
             {{ $t('transaction.script.contract_' + contractInfo[index].type) }}
@@ -109,7 +109,7 @@
             <TransactionLink v-if="output.spentTxId" :transaction="output.spentTxId" :clipboard="false">
               <Icon icon="search" />
             </TransactionLink>
-            {{ output.value | qtumcash(8) }} QTUM
+            {{ output.value | qth(8) }} QTH
           </span>
           <span class="is-pulled-right" v-else-if="contractInfo[index]">
             {{ $t('transaction.script.contract_' + contractInfo[index].type) }}
@@ -153,7 +153,7 @@
             <AddressLink :address="inputs[0].address" class="is-pulled-left"
               :highlight="highlightAddress" :clipboard="false" />
             <span class="is-pulled-right amount break-word">
-              {{ refundValue | qtumcash(8) }} QTUM
+              {{ refundValue | qth(8) }} QTH
             </span>
           </div>
         </div>
@@ -165,7 +165,7 @@
         <div v-for="input in inputs" class="is-clearfix">
           <AddressLink :address="input.address" class="is-pulled-left" :highlight="highlightAddress" :clipboard="false" />
           <span class="is-pulled-right amount">
-            {{ input.value | qtumcash(8) }} QTUM
+            {{ input.value | qth(8) }} QTH
           </span>
         </div>
       </div>
@@ -174,7 +174,7 @@
         <div v-for="output in outputs" class="is-clearfix">
           <AddressLink :address="output.address" class="is-pulled-left" :highlight="highlightAddress" :clipboard="false" />
           <span class="is-pulled-right amount">
-            {{ output.value | qtumcash(8) }} QTUM
+            {{ output.value | qth(8) }} QTH
           </span>
         </div>
       </div>
@@ -235,10 +235,10 @@
     </template>
     <div class="column is-full has-text-right collapse-bottom" v-if="fees !== '0'">
       <template v-if="fees > 0">
-        {{ $t('transaction.fee') }} <span class="amount fee">{{ fees | qtumcash }} QTUM</span>
+        {{ $t('transaction.fee') }} <span class="amount fee">{{ fees | qth }} QTH</span>
       </template>
       <template v-else-if="fees < 0">
-        {{ $t('transaction.reward') }} <span class="amount fee">{{ -fees | qtumcash }} QTUM</span>
+        {{ $t('transaction.reward') }} <span class="amount fee">{{ -fees | qth }} QTH</span>
       </template>
     </div>
   </div>

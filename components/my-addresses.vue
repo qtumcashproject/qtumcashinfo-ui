@@ -9,7 +9,7 @@
           <td class="address">
             <AddressLink :address="address" @click="show = false" />
           </td>
-          <td class="monospace has-text-right">{{ balance | qtumcash(8) }}</td>
+          <td class="monospace has-text-right">{{ balance | qth(8) }}</td>
           <td>
             <Icon icon="trash" @click="remove(address)" />
           </td>
@@ -23,7 +23,7 @@
               {{ $t('my_addresses.summary') }}
             </AddressLink>
           </td>
-          <td class="monospace has-text-right">{{ totalBalance | qtumcash(8) }}</td>
+          <td class="monospace has-text-right">{{ totalBalance | qth(8) }}</td>
           <td></td>
         </tr>
       </tfoot>

@@ -16,7 +16,7 @@
           <td>
             <AddressLink :address="address" />
           </td>
-          <td class="monospace break-word">{{ balance | qtumcash(8) }} QTH</td>
+          <td class="monospace break-word">{{ balance | qth(8) }} QTH</td>
           <td class="monospace">{{ (balance / totalSupply * 100).toFixed(4) + '%' }}</td>
         </tr>
       </tbody>
@@ -75,14 +75,14 @@
       totalSupply() {
         let height = this.blockchain.height
         if (height <= 5000) {
-          return height * 1e13
+          return height * 13600
         }
-        let supply = 5*1e16
-        let reward = 1e11
-        let interval = 250000
+        let supply = 1.6888e8
+        let reward = 17e8
+        let interval = 1000000
         height -= 5000
         let halvings = 0
-        while (halvings < 7 && height > interval) {
+        while (halvings < 64 && height > interval) {
           supply += interval * (reward >>> halvings++)
           height -= interval
         }

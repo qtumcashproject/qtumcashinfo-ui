@@ -3,41 +3,41 @@
     <div class="container">
       <h3 class="is-size-4 is-uppercase">{{ $t('footer.contact_us') }}</h3>
       <div class="line"></div>
-      <a href="mailto:hello@bs.world">hello@bs.world</a>
+      <a href="mailto:hello@qtumcash.world">hello@qtumcash.world</a>
       <ul class="links">
         <li>
-          <a target="_blank" href="https://www.facebook.com/bsworld.company">
+          <a target="_blank" href="https://www.facebook.com/qtumcash.company">
             <Icon icon="facebook" brands /> {{ $t('footer.facebook') }}
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://twitter.com/bsworld_company">
+          <a target="_blank" href="https://twitter.com/qtumcash_company">
             <Icon icon="twitter" brands /> {{ $t('footer.twitter') }}
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://cryptorussia.net/clubs/4-qtumcash/">
+          <a target="_blank" href="https://cryptorussia.net/clubs/4-qtumcashchain/">
             <span class="qtumcash-icon qtumcash-icon--forum"></span> {{ $t('footer.forum') }}
           </a>
         </li>
         <li>
-          <a target="_blank" href="https://github.com/Blockchain-Solutions-QTH/qtumcash-core">
+          <a target="_blank" href="https://github.com/qtumcashproject/qtumcashchain-core">
             <Icon icon="github" brands /> Github
           </a>
         </li>
 		<li>
-          <a target="_blank" href="https://qtumcash.org/">
-            <span class="qtumcash-icon qtumcash-icon--qtumcash"></span> QtumCash
+          <a target="_blank" href="https://qtumcash.website/">
+            <span class="qtumcash-icon qtumcash-icon--qtumcashchain"></span> qtumcash
           </a>
         </li>
 		<li>
-          <a target="_blank" href="https://bs.world/">
-            <span class="qtumcash-icon qtumcash-icon--qtumcash"></span> QTH
+          <a target="_blank" href="https://qtumcash.website/">
+            <span class="qtumcash-icon qtumcash-icon--qtumcash"></span> QtumCash
           </a>
         </li>
       </ul>
       <div class="copyright">
-        2020 QTH CHAIN FOUNDATION &copy; {{ $t('footer.rights_reserved') }}
+        2020 QtumCash FOUNDATION &copy; {{ $t('footer.rights_reserved') }}
       </div>
     </div>
   </footer>

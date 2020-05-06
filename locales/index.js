@@ -1,7 +1,6 @@
 import en from './en.yaml'
-import ru from './ru.yaml'
 
-let locales = ['en', 'ru']
-let messages = {en, ru}
+let locales = ['en']
+let messages = {en}
 
 export {locales, messages}

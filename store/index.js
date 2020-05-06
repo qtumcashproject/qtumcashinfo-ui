@@ -1,4 +1,4 @@
-import qtumcashinfoAPI from '@/services/qtumcashinfo-api'
+import bcsinfoAPI from '@/services/bcsinfo-api'
 import {getLocale} from '@/plugins/i18n'
 
 export const actions = {
